@@ -42,21 +42,6 @@ public class DoctorService {
                 return "Dermatology";
             case "Ear pain":
                 return "ENT specialist";
-            case "anemia":
-            case "sickle cell disease":
-            case "hemophilia":
-            case "leukemia":
-                return "Hematologists";
-            case "diabetes":
-            case "thyroid problems":
-            case "infertility":
-                return "Endocrinologists";
-            case "asthma":
-            case "eczema":
-            case "food allergies":
-            case "insect sting allergies":
-                return "Immunologists";
-
             default:
                 return "Unknown"; // handle unknown cases or throw exception
         }
