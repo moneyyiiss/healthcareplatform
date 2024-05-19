@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "0e163230-2cd7-4e24-9bf6-5206760552bb",
+		"name": "HealthCarePlatform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21158884"
+	},
+	"item": [
+		{
+			"name": "AddDoctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Dr. Srikant1\",\r\n    \"city\" : \"Bangalore\",\r\n    \"email\" : \"srikant1@gmail.com\",\r\n    \"phoneNumber\" : \"4845415446\",\r\n    \"speciality\" : \"Endocrinologists\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/doctors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"doctors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Raghu\",\r\n    \"city\": \"Pune\",\r\n    \"email\" : \"raghu434@gmail.com\",\r\n    \"phoneNumber\": \"4841649592\",\r\n    \"symptom\" : \"leukemia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/patients/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "suggest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/doctors/suggest?symptom=hemophilia&location=Pune",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"doctors",
+						"suggest"
+					],
+					"query": [
+						{
+							"key": "symptom",
+							"value": "hemophilia"
+						},
+						{
+							"key": "location",
+							"value": "Pune"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
