@@ -28,8 +28,7 @@ public class DoctorController {
 		return ResponseEntity.ok(newDoctor);
 	}
 	
-	
-	
+
 	@GetMapping("/suggest")
 	public ResponseEntity<?> suggestDoctors(@RequestParam String symptom, @RequestParam String location){
 		try {

@@ -22,7 +22,7 @@ public class DoctorService {
 		return doctorRepository.save(doctor);
 	}
 	
-	
+
 	public List<Doctor> findDoctorsBySymptomAndLocation(String symptom, String location){
 		String specialty = mapSymptomToSpecialty(symptom);
 		return doctorRepository.findByCityAndSpeciality(location, specialty);
